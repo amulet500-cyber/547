@@ -2,18 +2,78 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โพธิพยากรณ์ 547 ชาดก</title>
     <style>
-        body { font-family: 'Tahoma', sans-serif; background: #fffde7; text-align: center; padding-top: 50px; }
-        .card { border: 8px solid #b8860b; padding: 40px; width: 80%; margin: 0 auto; background: white; border-radius: 20px; box-shadow: 10px 10px 5px #ccc; }
-        button { padding: 20px 40px; font-size: 24px; cursor: pointer; background: #d35400; color: white; border: none; border-radius: 15px; margin-top: 20px; }
+        body { 
+            font-family: 'Sarabun', 'Tahoma', sans-serif; 
+            background: #fffde7; 
+            text-align: center; 
+            padding: 20px; 
+            color: #4e342e;
+        }
+        .container { 
+            border: 8px solid #b8860b; 
+            padding: 30px; 
+            width: 95%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: white; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+        }
+        h1 { color: #b8860b; margin-bottom: 30px; font-size: 42px; }
+        #result { 
+            min-height: 200px; 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 15px; 
+            margin-top: 20px; 
+        }
+        button { 
+            padding: 15px 40px; 
+            font-size: 22px; 
+            cursor: pointer; 
+            background: linear-gradient(145deg, #d35400, #e67e22); 
+            color: white; 
+            border: none; 
+            border-radius: 50px; 
+            margin-top: 30px;
+            box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4);
+            transition: 0.3s;
+        }
+        button:hover { transform: scale(1.05); background: #e67e22; }
+        
+        /* สไตล์ของการ์ดพยากรณ์แต่ละใบ */
+        .prediction-card {
+            flex: 1;
+            min-width: 300px;
+            max-width: 380px;
+            padding: 20px;
+            border: 3px solid #b8860b;
+            border-radius: 15px;
+            background: #fffaf0;
+            text-align: left;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.05);
+        }
+        .prediction-card h4 { 
+            margin: 0 0 10px 0; 
+            color: #d35400; 
+            border-bottom: 1px solid #ddd; 
+            padding-bottom: 5px;
+        }
+        .jataka-name { font-weight: bold; color: #b8860b; margin-bottom: 10px; font-size: 18px; }
+        .jataka-moral { font-size: 15px; line-height: 1.5; color: #333; }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>✨ โพธิพยากรณ์ ✨</h1>
-        <div id="result">กดปุ่มเพื่อดูคำทำนาย อดีต ปัจจุบัน อนาคต</div>
+    <div class="container">
+        <h1>✨ โพธิพยากรณ์ 547 ชาดก ✨</h1>
+        <div id="result">
+            <p style="color: #888;">ตั้งจิตอธิษฐานแล้วกดปุ่มเพื่อดูคำทำนาย อดีต ปัจจุบัน อนาคต</p>
+        </div>
         <button onclick="predictThreeCards()">สุ่มคำทำนาย 3 กาล</button>
     </div>
 
