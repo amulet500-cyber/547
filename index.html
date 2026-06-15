@@ -22,7 +22,24 @@
             border-radius: 20px; 
             box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
         }
-        h1 { color: #b8860b; margin-bottom: 30px; font-size: 42px; }
+        h1 { color: #b8860b; margin-bottom: 20px; font-size: 42px; }
+        
+        /* ปุ่มสไตล์ใหม่ที่อยู่ด้านบน */
+        button { 
+            padding: 15px 40px; 
+            font-size: 20px; 
+            cursor: pointer; 
+            background: linear-gradient(145deg, #d35400, #e67e22); 
+            color: white; 
+            border: none; 
+            border-radius: 50px; 
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4);
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        button:hover { transform: scale(1.05); background: #e67e22; }
+
         #result { 
             min-height: 200px; 
             display: flex; 
@@ -31,21 +48,7 @@
             gap: 15px; 
             margin-top: 20px; 
         }
-        button { 
-            padding: 15px 40px; 
-            font-size: 22px; 
-            cursor: pointer; 
-            background: linear-gradient(145deg, #d35400, #e67e22); 
-            color: white; 
-            border: none; 
-            border-radius: 50px; 
-            margin-top: 30px;
-            box-shadow: 0 5px 15px rgba(211, 84, 0, 0.4);
-            transition: 0.3s;
-        }
-        button:hover { transform: scale(1.05); background: #e67e22; }
         
-        /* สไตล์ของการ์ดพยากรณ์แต่ละใบ */
         .prediction-card {
             flex: 1;
             min-width: 300px;
@@ -63,18 +66,18 @@
             border-bottom: 1px solid #ddd; 
             padding-bottom: 5px;
         }
-        .jataka-name { font-weight: bold; color: #b8860b; margin-bottom: 10px; font-size: 18px; }
-        .jataka-moral { font-size: 15px; line-height: 1.5; color: #333; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>✨ โพธิพยากรณ์ 547 ชาดก ✨</h1>
+        
+        <button onclick="predictThreeCards()">อธิษฐานจิต สงบดีแล้ว กดปุ่ม โพธิพยากรณ์</button>
+
         <div id="result">
-            <p style="color: #888;">ตั้งจิตอธิษฐานแล้วกดปุ่มเพื่อดูคำทำนาย อดีต ปัจจุบัน อนาคต</p>
+            <p style="color: #888;">กดปุ่มเพื่อเริ่มน้อมรับคำสอนจากชาดก 3 กาล</p>
         </div>
-        <button onclick="predictThreeCards()">สุ่มคำทำนาย 3 กาล</button>
     </div>
 
     <script src="data.js"></script>
